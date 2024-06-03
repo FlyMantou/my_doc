@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>直播接入文档 | 云直播文档</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="云直播安卓SDK文档">
+    
+    <link rel="preload" href="/ccdoc/assets/css/0.styles.5cd3e0f9.css" as="style"><link rel="preload" href="/ccdoc/assets/js/app.a9de829f.js" as="script"><link rel="preload" href="/ccdoc/assets/js/2.c82fb5c4.js" as="script"><link rel="preload" href="/ccdoc/assets/js/11.c2d12ce2.js" as="script"><link rel="prefetch" href="/ccdoc/assets/js/10.82ab97d5.js"><link rel="prefetch" href="/ccdoc/assets/js/3.4122aa84.js"><link rel="prefetch" href="/ccdoc/assets/js/4.fccfc994.js"><link rel="prefetch" href="/ccdoc/assets/js/5.c012071c.js"><link rel="prefetch" href="/ccdoc/assets/js/6.f449b019.js"><link rel="prefetch" href="/ccdoc/assets/js/7.d8bf586d.js"><link rel="prefetch" href="/ccdoc/assets/js/8.4231a2f5.js"><link rel="prefetch" href="/ccdoc/assets/js/9.0847abae.js">
+    <link rel="stylesheet" href="/ccdoc/assets/css/0.styles.5cd3e0f9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/ccdoc/" class="home-link router-link-active"><!----> <span class="site-name">云直播文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ccdoc/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/ccdoc/pages/6aaaf02dd210e3d2.html" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ccdoc/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/ccdoc/language/japanese/" class="nav-link">
+  Japanese
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多" class="mobile-dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ccdoc/pages/9a7ee40fc232253e/" class="nav-link">
+  学习
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ccdoc/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/ccdoc/pages/6aaaf02dd210e3d2.html" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ccdoc/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/ccdoc/language/japanese/" class="nav-link">
+  Japanese
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多" class="mobile-dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ccdoc/pages/9a7ee40fc232253e/" class="nav-link">
+  学习
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/ccdoc/pages/6aaaf02dd210e3d2/" class="sidebar-link">快速集成</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_1-概述" class="sidebar-link">1. 概述</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_1-1阅读对象" class="sidebar-link">1.1阅读对象</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_1-3-最低版本要求" class="sidebar-link">1.3 最低版本要求</a></li></ul></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_2-开发准备" class="sidebar-link">2. 开发准备</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_2-1-开发环境" class="sidebar-link">2.1 开发环境</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_2-2-混淆配置" class="sidebar-link">2.2 混淆配置</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_2-3-权限配置" class="sidebar-link">2.3 权限配置</a></li></ul></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_3-快速集成" class="sidebar-link">3. 快速集成</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_3-1-maven集成" class="sidebar-link">3.1 maven集成</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_3-2-本地集成" class="sidebar-link">3.2 本地集成</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_3-3-配置动态库" class="sidebar-link">3.3 配置动态库</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_3-4-初始化sdk" class="sidebar-link">3.4 初始化SDK</a></li></ul></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_4-集成说明" class="sidebar-link">4. 集成说明</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/6aaaf02dd210e3d2/#_5-注意事项" class="sidebar-link">5. 注意事项</a></li></ul></li><li><a href="/ccdoc/pages/b1c5a40a838f892a/" aria-current="page" class="active sidebar-link">直播接入文档</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_1-直播核心功能" class="sidebar-link">1. 直播核心功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_1-1直播登录" class="sidebar-link">1.1直播登录</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_1-2-直播播放视频和文档" class="sidebar-link">1.2 直播播放视频和文档</a></li></ul></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-直播其他功能" class="sidebar-link">2. 直播其他功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-1-聊天功能" class="sidebar-link">2.1 聊天功能</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-2-问答功能" class="sidebar-link">2.2 问答功能</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-3-签到功能" class="sidebar-link">2.3 签到功能</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-4-抽奖1-0" class="sidebar-link">2.4 抽奖1.0</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-5-抽奖2-0" class="sidebar-link">2.5 抽奖2.0</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-6-公告功能" class="sidebar-link">2.6 公告功能</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-7-问卷功能" class="sidebar-link">2.7 问卷功能</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-8-广播功能" class="sidebar-link">2.8 广播功能</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-9-答题卡功能-投票功能" class="sidebar-link">2.9 答题卡功能（投票功能）</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-10-随堂测功能" class="sidebar-link">2.10 随堂测功能</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-11-连麦功能" class="sidebar-link">2.11 连麦功能</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-12-音频模式-deprecated-2021-10-08" class="sidebar-link">2.12 音频模式（Deprecated 2021-10-08）</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-13-获取在线人数" class="sidebar-link">2.13 获取在线人数</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-14-用户踢出" class="sidebar-link">2.14 用户踢出</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-15-打卡" class="sidebar-link">2.15 打卡</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-16-上下课逻辑" class="sidebar-link">2.16 上下课逻辑</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-17-历史文档数据" class="sidebar-link">2.17 历史文档数据</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-18-线路切换-deprecated-2021-10-08" class="sidebar-link">2.18 线路切换（Deprecated 2021-10-08）</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-19-清晰度切换" class="sidebar-link">2.19 清晰度切换</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-20-线路切换" class="sidebar-link">2.20 线路切换</a></li><li class="sidebar-sub-header"><a href="/ccdoc/pages/b1c5a40a838f892a/#_2-21-音视频播放模式切换" class="sidebar-link">2.21 音视频播放模式切换</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="关于如何接入sdk直播功能"><a href="#关于如何接入sdk直播功能" class="header-anchor">#</a> 关于如何接入SDK直播功能</h1> <p>本文主要介绍如何接入SDK直播功能，包括两大部分，核心功能和其他功能</p> <h2 id="_1-直播核心功能"><a href="#_1-直播核心功能" class="header-anchor">#</a> 1. 直播核心功能</h2> <h3 id="_1-1直播登录"><a href="#_1-1直播登录" class="header-anchor">#</a> 1.1直播登录</h3> <h4 id="_1-1-1-主动调用api"><a href="#_1-1-1-主动调用api" class="header-anchor">#</a> 1.1.1 主动调用api</h4> <p>直播登录需要主动调用方法在DWLive.java（DWLive为单例）中，如下</p> <table><thead><tr><th style="text-align:left;">方法</th> <th style="text-align:left;">说明</th></tr></thead> <tbody><tr><td style="text-align:left;">getInstance()</td> <td style="text-align:left;">获取DWLive单例</td></tr> <tr><td style="text-align:left;">setDWLiveLoginParams(DWLiveLoginListener, LoginInfo)</td> <td style="text-align:left;">（过时）设置直播间登录参数</td></tr> <tr><td style="text-align:left;">startLogin()</td> <td style="text-align:left;">（过时）开始登录</td></tr> <tr><td style="text-align:left;">startLogin(LoginInfo, DWLiveLoginListener)</td> <td style="text-align:left;"><code>（&gt;=3.14.0）</code>设置参数并执行登录</td></tr></tbody></table> <p>登录所需参数LoginInfo参数如下</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">// 用户ID   </span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> userId<span class="token punctuation">;</span>   
+<span class="token comment">// 直播间ID   </span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> roomId<span class="token punctuation">;</span>       
+<span class="token comment">// 观众名称  </span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> viewerName<span class="token punctuation">;</span>    
+<span class="token comment">// 观众密码    </span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> viewerToken<span class="token punctuation">;</span>   
+<span class="token comment">// 观众UA Type 信息 (选填) -- 主要是为了用户做统计使用，对登录无影响                      </span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> viewerCustomUa<span class="token punctuation">;</span>
+<span class="token comment">// 自定义观众信息（选填）-- 该信息会记录在用户访问记录中，用于统计分析使用                       </span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> viewerCustomInfo<span class="token punctuation">;</span> 
+<span class="token comment">// 分组ID (选填)  用于聊天分组功能</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> groupId<span class="token punctuation">;</span>                                                            
+</code></pre></div><h4 id="_1-1-2-回调事件api"><a href="#_1-1-2-回调事件api" class="header-anchor">#</a> 1.1.2 回调事件api</h4> <p>DWLiveLoginListener</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td>onLogin(TemplateInfo info, Viewer viewer, RoomInfo roomInfo, PublishInfo publishInfo)</td> <td>登录成功回调</td></tr> <tr><td>onException(DWLiveException exception);</td> <td>登录失败回调</td></tr></tbody></table> <p>回调返回参数说明</p> <p>TemplateInfo 模版信息 参数如下</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">// 直播间模版类型 1-6 对应后台配置：直播间模板配置</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> type<span class="token punctuation">;</span>
+<span class="token comment">// 模版名称</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>   
+<span class="token comment">// 模版描述</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> description<span class="token punctuation">;</span>                  
+<span class="token comment">// 是否开课，&quot;1&quot;为开课 &quot;0&quot;为未开课                                                           </span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> status<span class="token punctuation">;</span>                                              
+</code></pre></div><p>Viewer 用户信息 参数如下</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">// 用户名</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>       
+<span class="token comment">// 用户key</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> key<span class="token punctuation">;</span>   
+<span class="token comment">// 用户唯一Id</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> id<span class="token punctuation">;</span>        
+<span class="token comment">// 分组Id</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> groupId<span class="token punctuation">;</span>                      
+</code></pre></div><p>RoomInfo 房间信息 参数如下</p> <div class="language-java extra-class"><pre class="language-java"><code>    <span class="token comment">//直播间Id</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> id<span class="token punctuation">;</span>
+    <span class="token comment">//直播间名称</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token comment">//直播间描述</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> desc<span class="token punctuation">;</span>
+    <span class="token comment">//直播间设置的最大回看时间</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> dvr<span class="token punctuation">;</span>
+    <span class="token comment">//直播间设定的延迟时间 (单位：毫秒) 当延迟为0的时候，表示该房间为低延迟直播间</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> delayTime<span class="token punctuation">;</span>
+    <span class="token comment">//极速文档展示模式 ：1——适合窗口，2——适合宽度</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> documentDisplayMode <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">//当前直播间是否封禁  0——未封禁，1——封禁 （直播观看专用）</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> isBan<span class="token punctuation">;</span>
+    <span class="token comment">//是否展示直播间人数 （对应后台设置：显示在线人数），1——展示 ，0——不展示</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> showUserCount<span class="token punctuation">;</span>
+    <span class="token comment">//多清晰度支持 0 为不支持 1 为支持</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> multiQuality<span class="token punctuation">;</span>
+    <span class="token comment">//弹幕功能    0：关闭；1：开启</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> barrage<span class="token punctuation">;</span>
+    <span class="token comment">//跑马灯功能  0：关闭；1：开启</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> openMarquee<span class="token punctuation">;</span>
+    <span class="token comment">//倒计时功能  0：关闭；1：开启</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> openLiveCountdown<span class="token punctuation">;</span>
+    <span class="token comment">//私聊开关，1开启，（默认开启），0：关闭</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> privateChat <span class="token operator">=</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//倒计时功能 还剩多久开始直播 单位：秒</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> liveCountdown<span class="token punctuation">;</span>
+    <span class="token comment">//直播开始时间</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> estimateStartTime<span class="token punctuation">;</span>
+    <span class="token comment">//回放的标题和简介</span>
+    <span class="token keyword">private</span> <span class="token class-name">BaseRecordInfo</span> baseRecordInfo<span class="token punctuation">;</span>
+    <span class="token comment">//播放器提示语</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> playerBackgroundHint<span class="token punctuation">;</span>
+    <span class="token comment">//播放器背景图</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> playerBackgroundImageUri<span class="token punctuation">;</span>
+</code></pre></div><h4 id="_1-1-3-关键代码示例"><a href="#_1-1-3-关键代码示例" class="header-anchor">#</a> 1.1.3 关键代码示例</h4> <p>登录调用代码示例如下：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment">// 1.构造回调参数</span>
+<span class="token class-name">DWLiveLoginListener</span> dwLiveListener <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DWLiveLoginListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                         
+    <span class="token annotation punctuation">@Override</span>                                                                             
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onLogin</span><span class="token punctuation">(</span><span class="token class-name">TemplateInfo</span> templateInfo<span class="token punctuation">,</span> <span class="token class-name">Viewer</span> viewer<span class="token punctuation">,</span> <span class="token class-name">RoomInfo</span> roomInfo<span class="token punctuation">,</span> <span class="token class-name">PublishInfo</span> publishInfo<span class="token punctuation">)</span> <span class="token punctuation">{</span>      
+        <span class="token comment">//TODO 登录成功了，跳转到直播播放页面                                                 </span>
+    <span class="token punctuation">}</span>                                                                                     
+    <span class="token annotation punctuation">@Override</span>                                                                             
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onException</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">DWLiveException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// TODO 登录失败，添加告知用户登录失败的逻辑 </span>
+    <span class="token punctuation">}</span>                                                                                     
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// 2.构造登录参数</span>
+<span class="token class-name">LoginInfo</span> loginInfo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LoginInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                   
+loginInfo<span class="token punctuation">.</span><span class="token function">setRoomId</span><span class="token punctuation">(</span><span class="token string">&quot;房间ID&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+loginInfo<span class="token punctuation">.</span><span class="token function">setUserId</span><span class="token punctuation">(</span><span class="token string">&quot;用户ID&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 
+loginInfo<span class="token punctuation">.</span><span class="token function">setViewerName</span><span class="token punctuation">(</span><span class="token string">&quot;用户名&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                  
+loginInfo<span class="token punctuation">.</span><span class="token function">setViewerToken</span><span class="token punctuation">(</span><span class="token string">&quot;密码&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                    
+<span class="token comment">// 3.设置登录参数并登录</span>
+<span class="token class-name">DWLive</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startLogin</span><span class="token punctuation">(</span><span class="token class-name">LiveLoginListener</span><span class="token punctuation">,</span>loginInfo<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre></div><h3 id="_1-2-直播播放视频和文档"><a href="#_1-2-直播播放视频和文档" class="header-anchor">#</a> 1.2 直播播放视频和文档</h3> <h4 id="_1-2-1主动调用api"><a href="#_1-2-1主动调用api" class="header-anchor">#</a> 1.2.1主动调用api</h4> <p>直播核心类代码在DWLive.java类中（DWLive为单例）调用直播视频播放代码如下</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td>setDWLivePlayParams(DWLiveListener dwLiveListener, Context context)</td> <td>设置回调和上下文</td></tr> <tr><td>setDWLivePlayer(DWLivePlayer player)</td> <td>设置播放器</td></tr> <tr><td>setDWLivePlayDocView(DocView docView)</td> <td>设置文档</td></tr> <tr><td>start(Surface surface)</td> <td>开始播放，同步</td></tr> <tr><td>start()</td> <td>开始播放，player需设置Surface</td></tr> <tr><td>pause()</td> <td>暂停播放器</td></tr> <tr><td>stop()</td> <td>停止播放</td></tr> <tr><td>onDestroy()</td> <td>释放资源</td></tr> <tr><td>restartVideo()</td> <td>重置播放器，不重新获取播放地址</td></tr> <tr><td>reloadVideo()</td> <td>重置播放器，重新获取播放地址</td></tr></tbody></table> <p>直播DWLive文档自由翻页方法</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td>changeDocModeType(DocModeType docModeType)</td> <td>切换自由翻页模式和跟随模式（默认）</td></tr> <tr><td>changePageTo(String docId, int pageIndex)</td> <td>手动翻页</td></tr></tbody></table> <p>直播DWLive其他业务方法</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td>setVolume(float left, float right)</td> <td>设置播放声音大小</td></tr> <tr><td>changeQuality(int quality, LiveChangeSourceListener changeCallBack)</td> <td>（&gt;=3.14.0）切换视频清晰度</td></tr> <tr><td>changeLine(int lineIndex, LiveChangeSourceListener changeCallBack)</td> <td>（&gt;=3.14.0）切换媒体源线路</td></tr> <tr><td>changePlayMode(LivePlayMode playMode, LiveChangeSourceListener changeCallBack)</td> <td>（&gt;=3.14.0）切换播放模式</td></tr> <tr><td></td> <td></td></tr> <tr><td>setDocScaleType(DocView.ScaleType type)</td> <td>设置文档缩放模式</td></tr> <tr><td>changeDocBackgroundColor(String color)</td> <td>设置文档背景颜色</td></tr></tbody></table> <p>播放器核心代码在DWLivePlayer.java类中，调用方法如下</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>DWLivePlayer(Context context)</code></td> <td>构造方法</td></tr> <tr><td><code>setSurface(Surface surface)</code></td> <td>设置Surface</td></tr> <tr><td><code>start()</code></td> <td>开始播放</td></tr> <tr><td><code>pause()</code></td> <td>暂停播放</td></tr> <tr><td><code>stop()</code></td> <td>停止播放</td></tr> <tr><td><code>reset()</code></td> <td>重置播放器</td></tr> <tr><td><code>release()</code></td> <td>释放</td></tr> <tr><td><code>setPlayerEventListener(PlayerEvent playerEvent)</code></td> <td><code>（&gt;=3.14.0）</code>设置播放器监听</td></tr> <tr><td><code>setAntiRecordScreen(Activity activity)</code></td> <td><code>（&gt;=3.14.0）设置防录屏</code></td></tr> <tr><td><code>setOnPreparedListener(OnPreparedListener listener)</code></td> <td>（过时）设置准备回调</td></tr> <tr><td><code>setOnErrorListener(IMediaPlayer.OnErrorListener listener)</code></td> <td>（过时）设置失败回调</td></tr> <tr><td><code>setOnInfoListener(OnInfoListener listener)</code></td> <td>（过时）设置播放状态信息回调</td></tr> <tr><td><code>setOnVideoSizeChangedListener(OnVideoSizeChangedListener listener)</code></td> <td>（过时）设置视频尺寸信息回调</td></tr> <tr><td><code>setSpeedListener(LiveSpeedListener speedListener)</code></td> <td>（过时）设置视频缓冲的网速</td></tr></tbody></table> <h4 id="_1-2-2-播放器回调事件api"><a href="#_1-2-2-播放器回调事件api" class="header-anchor">#</a> 1.2.2 播放器回调事件api</h4> <p>PlayerEvent回调事件如下</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>onPrepared()</code></td> <td>播放器初始化完成</td></tr> <tr><td><code>onInfo(int what, int extra)</code></td> <td>播放器状态信息</td></tr> <tr><td><code>onVideoSizeChanged(int width, int height)</code></td> <td>播放器尺寸信息</td></tr> <tr><td><code>onBufferSpeed(float speed)</code></td> <td>媒体流网速</td></tr> <tr><td><code>onError(int code, DWLiveException exception)</code></td> <td>播放器失败信息</td></tr></tbody></table> <p>onInfo播放器状态信息的回调</p> <ol><li>缓冲开始</li></ol> <p><code>what = IMediaPlayer.MEDIA_INFO_BUFFERING_START</code></p> <ol start="2"><li>缓冲结束</li></ol> <p><code>what = IMediaPlayer.MEDIA_INFO_BUFFERING_END</code></p> <ol start="3"><li>开始渲染</li></ol> <p><code>what = IMediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START</code></p> <h4 id="_1-2-3-关键代码示例"><a href="#_1-2-3-关键代码示例" class="header-anchor">#</a> 1.2.3 关键代码示例</h4> <p>设置播放器显示布局：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TextureView</span>
+    <span class="token attr-name"><span class="token namespace">android:</span>id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>@+id/video_view<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>match_parent<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>match_parent<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p>设置文档展示的控件布局：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>com.bokecc.sdk.mobile.live.widget.DocView</span>
+    <span class="token attr-name"><span class="token namespace">android:</span>id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>@+id/doc_view<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>match_parent<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>match_parent<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p>初始化播放器并设置播放参数</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token class-name">DWLive</span> dwLive<span class="token punctuation">;</span>
+<span class="token class-name">TextureView</span> video_view<span class="token punctuation">;</span>
+<span class="token class-name">DocView</span> doc_view<span class="token punctuation">;</span>
+<span class="token class-name">Surface</span> mSurface<span class="token punctuation">;</span>
+<span class="token class-name">DWLivePlayer</span> mPlayer<span class="token punctuation">;</span>         
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+ mPlayer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DWLivePlayer</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+ <span class="token comment">// 1. 设置Surface的回调</span>
+ video_view<span class="token punctuation">.</span><span class="token function">setSurfaceTextureListener</span><span class="token punctuation">(</span>surfaceListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token comment">// 2. 获取单例</span>
+ dwLive <span class="token operator">=</span> <span class="token class-name">DWLive</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token comment">// 3. 设置播放器回调</span>
+ mPlayer<span class="token punctuation">.</span><span class="token function">setPlayerEventListener</span><span class="token punctuation">(</span>playerEvent<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+ <span class="token comment">// 4. 设置直播回调和上下文                                                                     </span>
+ dwLive<span class="token punctuation">.</span><span class="token function">setDWLivePlayParams</span><span class="token punctuation">(</span>dwLiveListener<span class="token punctuation">,</span> <span class="token class-name">DWLiveEngine</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+ <span class="token comment">// 5. 设置播放器</span>
+ dwLive<span class="token punctuation">.</span><span class="token function">setDWLivePlayer</span><span class="token punctuation">(</span>mPlayer<span class="token punctuation">)</span><span class="token punctuation">;</span>                                                         
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre></div><p>获取Surface</p> <p>下面是通过实现SurfaceTextureListener回调获得</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">private</span> <span class="token class-name">SurfaceTexture</span> mSurfaceTexture<span class="token punctuation">;</span>
+<span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSurfaceTextureAvailable</span><span class="token punctuation">(</span><span class="token class-name">SurfaceTexture</span> surfaceTexture<span class="token punctuation">,</span> <span class="token keyword">int</span> width<span class="token punctuation">,</span> <span class="token keyword">int</span> height<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment">// 设置Surface</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>mSurfaceTexture <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                         
+      mVideoContainer<span class="token punctuation">.</span><span class="token function">setSurfaceTexture</span><span class="token punctuation">(</span>mSurfaceTexture<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>                                               
+      mSurfaceTexture <span class="token operator">=</span> surfaceTexture<span class="token punctuation">;</span>                  
+      mSurface <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Surface</span><span class="token punctuation">(</span>surfaceTexture<span class="token punctuation">)</span><span class="token punctuation">;</span>   
+      <span class="token comment">// 将surface设置给播放器</span>
+      mPlayer<span class="token punctuation">.</span><span class="token function">setSurface</span><span class="token punctuation">(</span>mSurface<span class="token punctuation">)</span><span class="token punctuation">;</span>                       
+  <span class="token punctuation">}</span>                                                      
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSurfaceTextureSizeChanged</span><span class="token punctuation">(</span><span class="token class-name">SurfaceTexture</span> surface<span class="token punctuation">,</span> <span class="token keyword">int</span> width<span class="token punctuation">,</span> <span class="token keyword">int</span> height<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">onSurfaceTextureDestroyed</span><span class="token punctuation">(</span><span class="token class-name">SurfaceTexture</span> surface<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    surface <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSurfaceTextureUpdated</span><span class="token punctuation">(</span><span class="token class-name">SurfaceTexture</span> surface<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>                                                                           
+</code></pre></div><p>调用播放视频和文档方法</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//设置并播放文档                                    </span>
+dwLive<span class="token punctuation">.</span><span class="token function">setDWLivePlayDocView</span><span class="token punctuation">(</span>doc_view<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//播放视频</span>
+dwLive<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span>mSurface<span class="token punctuation">)</span><span class="token punctuation">;</span>                   
+</code></pre></div><h4 id="_1-2-4-集成说明"><a href="#_1-2-4-集成说明" class="header-anchor">#</a> 1.2.4 集成说明</h4> <p>完成上面的步骤后，我们就能够观看到直播间的视频画面和文档画面了，也就基本完成了获得视频直播的核心功能的集成，即观看视频和观看文档的功能。</p> <h2 id="_2-直播其他功能"><a href="#_2-直播其他功能" class="header-anchor">#</a> 2. 直播其他功能</h2> <h3 id="_2-1-聊天功能"><a href="#_2-1-聊天功能" class="header-anchor">#</a> 2.1 聊天功能</h3> <p>聊天历史记录回调在DWLiveListener类，相关方法如下：</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>onHistoryChatMessage(ArrayList&lt;ChatMessage&gt; chatLogs)</code></td> <td>历史聊天信息</td></tr></tbody></table> <p>注意该api可能会存在多次回调，回调情况如下:</p> <ul><li>首次进入直播间并调用start()开启直播回调</li> <li>网络切换会回调</li> <li>弱网造成直播尝试重连的情况会回调</li></ul> <p>聊天功能分为公共聊天和私聊，聊天时主动调用的方法在DWLive类，相关方法如下：</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>DWLive.sendPublicChatMsg(String publicChatMsg)</code></td> <td>发送公聊</td></tr> <tr><td><code>DWLive.sendPrivateChatMsg(String toUserId, String msg)</code></td> <td>发送私聊</td></tr></tbody></table> <p>聊天功能的核心回调类为DWLiveListener，相关的回调方法如下：</p> <p>接收公共聊天对应的回调方法为：自己发的公共聊天数据和别人的公共聊天数据都是通过此接口回调回来。</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>onPublicChatMessage(ChatMessage msg)</code></td> <td>接收公共聊天消息</td></tr></tbody></table> <p>返回的实体类ChatMessage 属性如下</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ChatMessage</span> <span class="token punctuation">{</span>
+ <span class="token comment">//聊天消息的id, 该参数有可能为空(只有开启⼈⼯审核功能,同时⽤户角⾊为学员时,此字段才会有数据)</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> chatId<span class="token punctuation">;</span>
+ <span class="token comment">//发送者用户id</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> userId<span class="token punctuation">;</span>
+ <span class="token comment">//发送者的用户名</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> userName<span class="token punctuation">;</span>
+ <span class="token comment">//聊天内容</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> message<span class="token punctuation">;</span>
+ <span class="token comment">//聊天时间</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> currentTime<span class="token punctuation">;</span>
+ <span class="token comment">//是否是公聊</span>
+ <span class="token keyword">private</span> <span class="token keyword">boolean</span> isPublic<span class="token punctuation">;</span>
+ <span class="token comment">//发送者的头像</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> avatar<span class="token punctuation">;</span>
+ <span class="token comment">//发送者的角色</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> userRole<span class="token punctuation">;</span>
+ <span class="token comment">// 用户自定义标记(用于客户自定义一些属性) 默认为空字符串</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> userCustomMark<span class="token punctuation">;</span> 
+ <span class="token comment">//聊天分组id</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> groupId<span class="token punctuation">;</span>
+ <span class="token comment">//聊天消息的状态 0 显示 1 不显示</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> status<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>接收别人私聊我的方法和接收我私聊别人的回调方法是两个方法，如下</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>onPrivateChat(PrivateChatInfo info)</code></td> <td>接收别人发我的消息</td></tr> <tr><td><code>onPrivateChatSelf(PrivateChatInfo info)</code></td> <td>接收我发给别人的消息</td></tr></tbody></table> <p>返回的实体类PrivateChatInfo 属性如下</p> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PrivateChatInfo</span> <span class="token punctuation">{</span>
+    <span class="token comment">//发送者的userid</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> fromUserId<span class="token punctuation">;</span>
+    <span class="token comment">//发送者的名字</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> fromUserName<span class="token punctuation">;</span>
+    <span class="token comment">//发送者的角色</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> fromUserRole<span class="token punctuation">;</span>
+    <span class="token comment">//发送者的头像</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> formUserAvatar<span class="token punctuation">;</span>
+    <span class="token comment">//接受者的userid</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> toUserId<span class="token punctuation">;</span>
+    <span class="token comment">//接受者的名字</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> toUserName<span class="token punctuation">;</span>
+    <span class="token comment">//消息内容</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> msg<span class="token punctuation">;</span>
+    <span class="token comment">//发送时间</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> time<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+</code></pre></div><ul><li>自己被禁言后，发出的聊天数据会从<code>onSilenceUserChatMessage(ChatMessage msg)</code>方法回调回来，而不会通过<code>onPublicChatMessage(ChatMessage msg)</code>回调。</li> <li>客户端禁止聊天后，发出的聊天数据不会回调，会通过onInformation方法回调内容为：讲师暂停了文字聊天，请专心看直播吧。</li></ul> <h3 id="_2-2-问答功能"><a href="#_2-2-问答功能" class="header-anchor">#</a> 2.2 问答功能</h3> <p>问答历史记录回调在<code>DWLiveListener</code>类，，相关方法如下：</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>onHistoryQuestionAnswer(List&lt;Question&gt; questions, List&lt;Answer&gt; answers)</code></td> <td>问答历史记录回调</td></tr></tbody></table> <p>注意该api可能会存在多次回调，回调情况如下:</p> <ul><li>首次进入直播间并调用<code>start()</code>开启直播回调</li> <li>网络切换会回调</li> <li>弱网造成直播尝试重连的情况会回调</li></ul> <p>提问时主动调用的方法在DWLive类，相关方法如下：</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>DWLive.sendQuestionMsg(String question)</code></td> <td>发送问题</td></tr></tbody></table> <p>问答功能的核心回调类为DWLiveListener，相关的回调方法如下：</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>onQuestion(Question question)</code></td> <td>接收问题的回调</td></tr> <tr><td><code>onPublishQuestion(String questionId)</code></td> <td>接收问题发布的ID的回调</td></tr> <tr><td><code>onAnswer(Answer answer)</code></td> <td>接收回答的回调</td></tr></tbody></table> <p>返回的实体类Question属性如下</p> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Question</span> <span class="token punctuation">{</span>
+    <span class="token comment">//问答的id</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> id<span class="token punctuation">;</span>
+    <span class="token comment">//问答的内容</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> content<span class="token punctuation">;</span>
+    <span class="token comment">//发布问答的userid</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> questionUserId<span class="token punctuation">;</span>
+    <span class="token comment">//发布问答的username</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> questionUserName<span class="token punctuation">;</span>
+    <span class="token comment">//问答的时间</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> time<span class="token punctuation">;</span>
+    <span class="token comment">//发布问答的头像</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userAvatar<span class="token punctuation">;</span>
+    <span class="token comment">//分组id</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> groupId<span class="token punctuation">;</span>
+    <span class="token comment">//是否是公开的</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> isPublish<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+</code></pre></div><p>返回的实体类属性如下</p> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Answer</span> <span class="token punctuation">{</span>
+    <span class="token comment">//问答的id</span>
+	<span class="token keyword">private</span> <span class="token class-name">String</span> questionId<span class="token punctuation">;</span>
+	  <span class="token comment">//回答的内容</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> content<span class="token punctuation">;</span>
+    <span class="token comment">//回答的用户id</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> answerUserId<span class="token punctuation">;</span>
+    <span class="token comment">//回答的用户名</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> answerUserName<span class="token punctuation">;</span>
+    <span class="token comment">//收到的时间</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> receiveTime<span class="token punctuation">;</span>
+    <span class="token comment">//是否公开</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> isPrivate<span class="token punctuation">;</span>
+    <span class="token comment">//回答的头像</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userAvatar<span class="token punctuation">;</span>
+    <span class="token comment">//回答的角色</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userRole<span class="token punctuation">;</span>
+    <span class="token comment">//分组id</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> groupId<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-3-签到功能"><a href="#_2-3-签到功能" class="header-anchor">#</a> 2.3 签到功能</h3> <p>签到时主动调用的方法在DWLive类，相关方法如下：</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>DWLive.sendRollCall()</code></td> <td>发送签到</td></tr></tbody></table> <p>签到功能的核心回调类为<code>DWLiveListener</code>，相关的回调方法如下：</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>onRollCall(int duration)</code></td> <td>收到签到事件的回调，duration 签到持续时间，单位为秒</td></tr></tbody></table> <h3 id="_2-4-抽奖1-0"><a href="#_2-4-抽奖1-0" class="header-anchor">#</a> 2.4 抽奖1.0</h3> <p>此功能为方法回调功能，相关类<code>DWLiveListener</code>，相关方法如下：</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>onStartLottery(String lotteryId)</code></td> <td>收到开始抽奖事件开始的回调</td></tr> <tr><td><code>onLotteryResult(boolean isWin, String lotteryCode, String lotteryId, String winnerName);</code></td> <td>收到抽奖结果事件的回调</td></tr> <tr><td><code>onStopLottery(String lotteryId)</code></td> <td>收到结束抽奖事件的回调</td></tr></tbody></table> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token comment">/**
+     * 开始抽奖
+     *
+     * @param lotteryId 本次抽奖的id
+     */</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStartLottery</span><span class="token punctuation">(</span><span class="token class-name">String</span> lotteryId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code> <span class="token comment">/**
+     * 抽奖结果
+     *
+     * @param isWin       是否中奖，true表示中奖了
+     * @param lotteryCode 中奖码
+     * @param lotteryId   本次抽奖的id
+     * @param winnerName  中奖者的名字
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onLotteryResult</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isWin<span class="token punctuation">,</span> <span class="token class-name">String</span> lotteryCode<span class="token punctuation">,</span> <span class="token class-name">String</span> lotteryId<span class="token punctuation">,</span> <span class="token class-name">String</span> winnerName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code> <span class="token comment">/**
+     * 结束抽奖
+     *
+     * @param lotteryId 本次抽奖的id
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStopLottery</span><span class="token punctuation">(</span><span class="token class-name">String</span> lotteryId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-5-抽奖2-0"><a href="#_2-5-抽奖2-0" class="header-anchor">#</a> 2.5 抽奖2.0</h3> <p>此功能需要主动获取和监听回调，首次进入需要主动获取抽奖，随后的抽奖需要去监听回调
+，相关类<code>DWLiveListener</code>、<code>DWLive</code>，相关方法如下：
+进入直播间前可设置是否去重 默认为<code>true</code>：</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>DWLive.getInstance().setLotteryRepetition(boolean isRepetition )</code></td> <td>是否sdk内部进行去重</td></tr></tbody></table> <p>首次进入直播间主动获取抽奖 调用时机在sdk初始化完成之后:</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>DWLive.getInstance().queryLotteryStatus()</code></td> <td>查询当前正在进行的抽奖</td></tr></tbody></table> <p>收到抽奖的回调 相关类<code>DWLiveListener</code>：</p> <div class="language-java extra-class"><pre class="language-java"><code>   <span class="token comment">/**
+     * 收到抽奖
+     * @param lotteryAction 抽奖的一些信息
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">onLottery</span><span class="token punctuation">(</span><span class="token class-name">LotteryAction</span> lotteryAction<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>提交抽奖 相关类<code>DWLive</code>：</p> <div class="language-java extra-class"><pre class="language-java"><code>   <span class="token comment">/**
+     * 提交抽奖信息
+     *
+     * @param commitInfos 提交的信息
+     * @param lotteryId   抽奖id
+     * @param callback    提交回调 
+     *                                    -2：切换时间间隔小于3s
+     *                                    -1：切换的线路不正确
+     *                                    0 ：切换成功
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">commitLottery</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LotteryCommitInfo</span><span class="token punctuation">&gt;</span></span> commitInfos<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">String</span> lotteryId<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">BaseCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre></div><p>相关的参数:</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LotteryCommitInfo</span> <span class="token punctuation">{</span>
+    <span class="token comment">//收到中奖信息中对应的 LotteryCollectTemplate.index</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> index<span class="token punctuation">;</span>
+    <span class="token comment">//用户填写的信息</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LotteryAction</span> <span class="token punctuation">{</span>
+    <span class="token comment">//抽奖订单ID</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> lotteryId<span class="token punctuation">;</span>
+    <span class="token comment">//抽奖订单状态   0抽奖创建成功， 1抽奖取消成功， 2抽奖已完成， 3抽奖异常结束</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> lotteryStatus<span class="token punctuation">;</span>
+    <span class="token comment">//抽奖订单类型   0普通抽奖类型（暂无别的抽奖类型）</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> lotteryType<span class="token punctuation">;</span>
+    <span class="token comment">//是否存在抽奖  注意当该字段为false的时候 存在其他字段无数据</span>
+    <span class="token keyword">private</span> <span class="token keyword">boolean</span> haveLottery<span class="token punctuation">;</span>
+    <span class="token comment">//中奖信息</span>
+    <span class="token keyword">private</span>  <span class="token class-name">LotteryWinInfo</span> lotteryWinInfo<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LotteryWinInfo</span> <span class="token punctuation">{</span>
+    <span class="token comment">//中奖人需要提交的信息</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LotteryCollectTemplate</span><span class="token punctuation">&gt;</span></span> collectTemplate<span class="token punctuation">;</span>
+    <span class="token comment">//是否中奖  true中奖  false未中奖</span>
+    <span class="token keyword">private</span> <span class="token keyword">boolean</span> isWinner<span class="token punctuation">;</span>
+    <span class="token comment">//自己的信息</span>
+    <span class="token keyword">private</span> <span class="token class-name">LotteryOwnUserInfo</span> ownUserInfo<span class="token punctuation">;</span>
+    <span class="token comment">//中奖人名单信息</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LotteryUserInfo</span><span class="token punctuation">&gt;</span></span> userInfos<span class="token punctuation">;</span>
+    <span class="token comment">//奖品信息</span>
+    <span class="token keyword">private</span> <span class="token class-name">LotteryPrize</span> prize<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LotteryCollectTemplate</span> <span class="token punctuation">{</span>
+    <span class="token comment">//索引 提交抽奖的时候用到</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> index<span class="token punctuation">;</span>
+    <span class="token comment">//标题</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> title<span class="token punctuation">;</span>
+    <span class="token comment">//提示语</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> tips<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LotteryOwnUserInfo</span> <span class="token punctuation">{</span>
+    <span class="token comment">//头像</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userAvatar<span class="token punctuation">;</span>
+    <span class="token comment">//名称</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userName<span class="token punctuation">;</span>
+    <span class="token comment">//用户id</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userId<span class="token punctuation">;</span>
+    <span class="token comment">//中奖码</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> prizeCode<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LotteryUserInfo</span> <span class="token punctuation">{</span>
+    <span class="token comment">//头像</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userAvatar<span class="token punctuation">;</span>
+    <span class="token comment">//用户名</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userName<span class="token punctuation">;</span>
+    <span class="token comment">//用户id</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userId<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LotteryPrize</span> <span class="token punctuation">{</span>
+    <span class="token comment">//奖品名称</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-6-公告功能"><a href="#_2-6-公告功能" class="header-anchor">#</a> 2.6 公告功能</h3> <p>此功能需要主动获取和监听回调，首次进入需要主动获取公告，随后的公告需要去监听回调
+，相关类<code>DWLiveListener</code>、<code>DWLive</code>，相关方法如下：
+首次进入直播间主动获取公告:</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>DWLive.getInstance().getAnnouncement()</code></td> <td>获取公告</td></tr></tbody></table> <p>收到公告的回调：</p> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token comment">/**
+     * 公告
+     * @param isRemove     是否是公告删除，如果为true，表示公告删除且announcement参数为null
+     * @param announcement 公告内容
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onAnnouncement</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isRemove<span class="token punctuation">,</span> <span class="token class-name">String</span> announcement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-7-问卷功能"><a href="#_2-7-问卷功能" class="header-anchor">#</a> 2.7 问卷功能</h3> <p>问卷功能主要为方法回调功能，相关类<code>DWLiveListener</code>，相关方法如下：</p> <ul><li>收到问卷发布的回调：</li></ul> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token comment">/**
+     * 发布问卷
+     *
+     * @param info 问卷内容
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onQuestionnairePublish</span><span class="token punctuation">(</span><span class="token class-name">QuestionnaireInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//参数说明</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">QuestionnaireInfo</span> <span class="token punctuation">{</span>
+       <span class="token keyword">private</span> <span class="token class-name">String</span> id<span class="token punctuation">;</span>  <span class="token comment">// 问卷ID</span>
+       <span class="token keyword">private</span> <span class="token class-name">String</span> title<span class="token punctuation">;</span> <span class="token comment">// 问卷标题</span>
+       <span class="token keyword">private</span> <span class="token keyword">int</span> submitedAction<span class="token punctuation">;</span> <span class="token comment">// 提交后的操作，非必须，默认为0，0：关闭，1：提交后显示答案</span>
+       <span class="token keyword">private</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Subject</span><span class="token punctuation">&gt;</span></span> subjects<span class="token punctuation">;</span> <span class="token comment">// 问卷题目</span>
+       <span class="token keyword">private</span> <span class="token keyword">int</span> forcibly<span class="token punctuation">;</span>  <span class="token comment">// 强制答卷</span>
+   <span class="token punctuation">}</span>
+</code></pre></div><ul><li>收到停止问卷的回调：</li></ul> <div class="language-java extra-class"><pre class="language-java"><code>   <span class="token comment">/**
+     * 停止问卷
+     *
+     * @param questionnaireId 问卷Id
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onQuestionnaireStop</span><span class="token punctuation">(</span><span class="token class-name">String</span> questionnaireId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>收到第三方问卷发布的回调：</li></ul> <div class="language-JAVA extra-class"><pre class="language-java"><code>   <span class="token comment">/**
+     * 发布第三方问卷
+     *
+     * @param title 问卷标题
+     * @param externalUrl 第三方问卷链接
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onExeternalQuestionnairePublish</span><span class="token punctuation">(</span><span class="token class-name">String</span> title<span class="token punctuation">,</span> <span class="token class-name">String</span> externalUrl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>收到问卷统计信息的回调：</li></ul> <div class="language-java extra-class"><pre class="language-java"><code>   <span class="token comment">/**
+     * 问卷统计信息
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onQuestionnaireStatis</span><span class="token punctuation">(</span><span class="token class-name">QuestionnaireStatisInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//参数</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">QuestionnaireStatisInfo</span> <span class="token punctuation">{</span>
+       <span class="token keyword">private</span> <span class="token class-name">String</span> id<span class="token punctuation">;</span>  <span class="token comment">// 问卷ID</span>
+       <span class="token keyword">private</span> <span class="token class-name">String</span> title<span class="token punctuation">;</span> <span class="token comment">// 问卷标题</span>
+       <span class="token keyword">private</span> <span class="token keyword">int</span> submitAnswerViewerCount<span class="token punctuation">;</span> <span class="token comment">// 提交答案的观众的数量</span>
+       <span class="token keyword">private</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Subject</span><span class="token punctuation">&gt;</span></span> subjects<span class="token punctuation">;</span> <span class="token comment">// 问卷题目</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><p>同时提供了主动获取当前正在进行问卷的方法：</p> <ul><li>主动获取问卷的方法：<code>fetchQuestionnaire()</code>。调用获取当前问卷的方法后，如果有正在进行的问卷，就会触发收到问卷发布回调方法<code>onQuestionnairePublish</code>。</li></ul> <h3 id="_2-8-广播功能"><a href="#_2-8-广播功能" class="header-anchor">#</a> 2.8 广播功能</h3> <p>此功能为方法回调功能，相关类<code>DWLiveListener</code>，相关方法如下：</p> <ul><li>收到广播消息的回调：</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 收到广播信息（实时）
+ *
+ * @param msg 广播消息
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onBroadcastMsg</span><span class="token punctuation">(</span><span class="token class-name">String</span> msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**                                                        
+ * 收到广播信息（实时）                                              
+ *                                                         
+ * @param msg 广播消息 包含id                                    
+ */</span>                                                                                                       
+<span class="token keyword">void</span> <span class="token function">onBroadcastMsg</span><span class="token punctuation">(</span><span class="token class-name">BroadCastMsg</span> msg<span class="token punctuation">)</span>；                                                       
+</code></pre></div><ul><li>收到历史广播消息的回调：</li></ul> <div class="language-JAVA extra-class"><pre class="language-java"><code> <span class="token comment">/**                                                              
+  * 收到历史广播信息(目前服务端只返回最后一条历史广播)                                    
+  *                                                               
+  * @param msgs 广播消息列表                                            
+  */</span>                                                              
+ <span class="token keyword">void</span> <span class="token function">onHistoryBroadcastMsg</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BroadCastMsg</span><span class="token punctuation">&gt;</span></span> msgs<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+</code></pre></div><p>注意该api可能会存在多次回调，回调情况如下:</p> <ul><li><p>首次进入直播间并调用<code>start()</code>开启直播回调</p></li> <li><p>网络切换会回调</p></li> <li><p>弱网造成直播尝试重连的情况会回调</p></li> <li><p>收到广播删除事件</p></li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**                                                
+ * 收到广播信息操作功能                                      
+ *                                                 
+ * @param action 广播操作信息类                           
+ *               &lt;p&gt;                               
+ *               BroadCastAction                   
+ *               ｛                                 
+ *               action：操作 1.删除                    
+ *               id：广播ID                           
+ *               ｝                                 
+ */</span>                                                
+<span class="token keyword">void</span> <span class="token function">onBroadcastMsgAction</span><span class="token punctuation">(</span><span class="token class-name">BroadCastAction</span> action<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre></div><h3 id="_2-9-答题卡功能-投票功能"><a href="#_2-9-答题卡功能-投票功能" class="header-anchor">#</a> 2.9 答题卡功能（投票功能）</h3> <ul><li>收到开始答题（投票）的回调</li></ul> <div class="language-java extra-class"><pre class="language-java"><code>    <span class="token comment">/**
+     * 开始投票
+     *
+     * @param voteCount 总共的选项个数2-5
+     * @param VoteType  0表示单选，1表示多选，目前只有单选
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onVoteStart</span><span class="token punctuation">(</span><span class="token keyword">int</span> voteCount<span class="token punctuation">,</span> <span class="token keyword">int</span> <span class="token class-name">VoteType</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>收到结束答题（投票）的回调：</li></ul> <div class="language-JAVA extra-class"><pre class="language-java"><code>   <span class="token comment">/**
+     * 结束投票
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onVoteStop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>收到答题（投票）结果统计的回调：</li></ul> <div class="language-java extra-class"><pre class="language-java"><code>    <span class="token comment">/**
+     * 投票结果统计
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onVoteResult</span><span class="token punctuation">(</span><span class="token class-name">JSONObject</span> jsonObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-10-随堂测功能"><a href="#_2-10-随堂测功能" class="header-anchor">#</a> 2.10 随堂测功能</h3> <p>主动获取随堂测的方法在<code>DWLive</code>类中，方法为：</p> <ul><li>获取当前实时的随堂测：</li></ul> <div class="language-JAVA extra-class"><pre class="language-java"><code>    <span class="token comment">/**
+     * 获取当前的随堂测
+     * &lt;br/&gt;
+     * 获取成功后会回调DwLiveListener.onPracticePublish()方法
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getPracticeInformation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>调用主动获取方法或者监听到主播端发布随堂测，就会触发接受随堂测题目的回调。</p> <p>接收随堂测题目的方法为回调功能，相关类为<code>DWLiveListener</code>，方法为：</p> <ul><li>收到随堂测发布的事件：</li></ul> <div class="language-java extra-class"><pre class="language-java"><code>       <span class="token comment">/**
+         * 发布随堂测
+         *
+         * @param info 随堂测内容
+         */</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onPracticePublish</span><span class="token punctuation">(</span><span class="token class-name">PracticeInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>参数说明</p> <div class="language-java extra-class"><pre class="language-java"><code>    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PracticeInfo</span> <span class="token punctuation">{</span>
+       <span class="token comment">//随堂测ID</span>
+       <span class="token keyword">private</span> <span class="token class-name">String</span> id<span class="token punctuation">;</span>
+       <span class="token comment">//随堂测类型 0 判断题 1 单选题 2 多选题</span>
+       <span class="token keyword">private</span> <span class="token keyword">int</span> type<span class="token punctuation">;</span>
+       <span class="token comment">//随堂测的状态: 1 正在发布 2 停止</span>
+       <span class="token keyword">private</span> <span class="token keyword">int</span> status<span class="token punctuation">;</span>
+       <span class="token comment">//随堂测发布时间 格式：yyyy-MM-dd HH:mm:ss</span>
+       <span class="token keyword">private</span> <span class="token class-name">String</span> publishTime<span class="token punctuation">;</span>
+       <span class="token comment">//是否已答过此随堂测</span>
+       <span class="token keyword">private</span> <span class="token keyword">boolean</span> isAnswered<span class="token punctuation">;</span>
+       <span class="token comment">//随堂测选项</span>
+       <span class="token keyword">private</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Option</span><span class="token punctuation">&gt;</span></span> options<span class="token punctuation">;</span>
+       <span class="token comment">// 服务器响应时间</span>
+       <span class="token keyword">private</span> <span class="token keyword">long</span> serverTime<span class="token punctuation">;</span>
+       <span class="token comment">// 答过题的答案id列表(如果答过题 当时选择的答案列表)</span>
+       <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SubmitOption</span><span class="token punctuation">&gt;</span></span> submitRecord<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><p>答完随堂测题目后，可以通过发送随堂测结果的方法来提交答案。</p> <p>提交随堂测结果的方法为主动方法，在<code>DWLive</code>类中，方法为：</p> <ul><li>提交随堂测结果：</li></ul> <div class="language-java extra-class"><pre class="language-java"><code>    <span class="token comment">/**
+     * 发送随堂测结果
+     * @param practiceId    随堂测ID
+     * @param answerOptions 随堂测回答的结果信息
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sendPracticeAnswer</span><span class="token punctuation">(</span><span class="token class-name">String</span> practiceId<span class="token punctuation">,</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> answerOptions<span class="token punctuation">)</span>
+</code></pre></div><p>提交后会通过<code>DWLiveListener</code>下的<code>onPracticeSubmitResult</code>回调随堂测提交结果。</p> <ul><li>收到随堂测结果回调事件：</li></ul> <div class="language-java extra-class"><pre class="language-java"><code>    <span class="token comment">/**
+     * 收到随堂测提交结果
+     *
+     * @param info 随堂测结果
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onPracticeSubmitResult</span><span class="token punctuation">(</span><span class="token class-name">PracticeSubmitResultInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>参数说明</p> <div class="language-java extra-class"><pre class="language-java"><code>   <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PracticeSubmitResultInfo</span> <span class="token punctuation">{</span>
+    <span class="token comment">//随堂测ID</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> id
+    <span class="token comment">//随堂测类型 0 判断题 1 单选题 2 多选题</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> type<span class="token punctuation">;</span>
+    <span class="token comment">//回答是否正确 1 正确 0 错误</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> answerResult<span class="token punctuation">;</span>
+    <span class="token comment">//随堂测选项</span>
+    <span class="token keyword">private</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Option</span><span class="token punctuation">&gt;</span></span> options<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+</code></pre></div><p>获取当前随堂测的统计信息，可调用<code>DWLive</code>下的<code>getPracticeStatis(String practiceId)</code>，此方法为主动调用方法。</p> <ul><li>获取随堂测统计信息：<code>getPracticeStatis(String practiceId)</code></li></ul> <p>调用获取统计信息的方法后，会通过<code>DWLiveListener的onPracticStatis(PracticeStatisInfo info)</code>方法回调当前的随堂测统计信息：</p> <ul><li>收到随堂测统计信息：<code>onPracticStatis(PracticeStatisInfo info)</code></li></ul> <div class="language-java extra-class"><pre class="language-java"><code>   <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PracticeStatisInfo</span> <span class="token punctuation">{</span>
+    <span class="token comment">//随堂测ID</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> id
+    <span class="token comment">//随堂测类型 0 判断题 1 单选题 2 多选题</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> type<span class="token punctuation">;</span>
+    <span class="token comment">// 随堂测状态 1 发布中 2 停止发布</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> status<span class="token punctuation">;</span>
+    <span class="token comment">// 回答该随堂测的人数</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> answerPersonNum<span class="token punctuation">;</span>
+    <span class="token comment">// 回答正确的人数</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> correctPersonNum<span class="token punctuation">;</span>
+    <span class="token comment">// 正确率</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> correctRate<span class="token punctuation">;</span>
+    <span class="token comment">// 停止时间</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> stopTime<span class="token punctuation">;</span>
+    <span class="token comment">// 选项的统计信息</span>
+    <span class="token keyword">private</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">OptionStatis</span><span class="token punctuation">&gt;</span></span> optionStatis<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OptionStatis</span> <span class="token punctuation">{</span>
+        <span class="token comment">//  选项ID</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> id<span class="token punctuation">;</span>
+        <span class="token comment">// 选项编号</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> index<span class="token punctuation">;</span>
+        <span class="token comment">// 选择该选项的人数</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> count<span class="token punctuation">;</span>
+        <span class="token comment">// 选择的比例</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> percent<span class="token punctuation">;</span>
+        <span class="token comment">// 是否为正确选项 1 正确 0 错误</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> isCorrect<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-11-连麦功能"><a href="#_2-11-连麦功能" class="header-anchor">#</a> 2.11 连麦功能</h3> <p>连麦时主动调用的方法都在<code>DWLive</code>类，相关方法如下：</p> <ul><li>设置连麦相关的参数：<code>setRtcClientParameters(RtcClientListener rtcClientListener, CCRTCRender localRender, CCRTCRender remoteRender)</code></li> <li>开始视频连麦：<code>startRtcConnect()</code></li> <li>开始音频连麦：<code>startVoiceRTCConnect()</code></li> <li>断开连麦：<code>disConnectSpeak()</code></li> <li>断开连麦申请：<code>disConnectApplySpeak()</code></li> <li>关闭摄像头，释放资源：<code>closeCamera()</code></li> <li>移除本地摄像头渲染：<code>removeLocalRender()</code></li></ul> <p>连麦功能的核心回调类为<code>RtcClient.RtcClientListener</code>，相关的回调方法如下：</p> <ul><li>回调当前是否能够连麦：<code>onAllowSpeakStatus(boolean isAllowSpeak)</code></li> <li>回调主播端接通连麦,开始连麦：<code>onEnterSpeak(String videoSize)</code></li> <li>回调连麦断开：<code>onDisconnectSpeak()</code></li> <li>回调连麦异常：<code>onSpeakError(Exception e)</code></li> <li>回调摄像头打开：<code>onCameraOpen(int width, int height)</code></li></ul> <h3 id="_2-12-音频模式-deprecated-2021-10-08"><a href="#_2-12-音频模式-deprecated-2021-10-08" class="header-anchor">#</a> 2.12 音频模式（Deprecated 2021-10-08）</h3> <p>该方法无法满足现有需求，用<strong>2.21 音视频播放模式切换</strong>替代</p> <p>此功能为主动调用功能，调用的方法在<code>DWLive</code>，相关方法如下：</p> <ul><li>切换当前播放模式：<code>changePlayMode(Surface surface, PlayMode playMode)</code></li></ul> <p>如果是切换到音频模式下，surface可以传null</p> <h3 id="_2-13-获取在线人数"><a href="#_2-13-获取在线人数" class="header-anchor">#</a> 2.13 获取在线人数</h3> <p>此功能为方法回调功能，相关类<code>DWLiveListener</code>，相关方法如下：</p> <ul><li>在线人数：<code>onUserCountMessage(int count)</code></li></ul> <p>返回的在线人数，是客户端设置的基数+实际人数之和</p> <h3 id="_2-14-用户踢出"><a href="#_2-14-用户踢出" class="header-anchor">#</a> 2.14 用户踢出</h3> <p>此方法为方法回调功能，相关类<code>DWLiveListener</code>，相关方法如下：</p> <ul><li>用户被踢出房间的回调：<code>onKickOut(int type)</code></li></ul> <p>其中type的值对应的内容如下：
+10: 在允许重复登录前提下，后进入者登录踢出先前登录者
+20：讲师、助教、主持人通过页面踢出按钮踢出用户</p> <h3 id="_2-15-打卡"><a href="#_2-15-打卡" class="header-anchor">#</a> 2.15 打卡</h3> <p>此方法为方法回调功能，相关类<code>BaseCallback</code>，相关方法如下：</p> <div class="language-java extra-class"><pre class="language-java"><code>    <span class="token comment">/**
+     * 打卡失败
+     * @param error 失败详情
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 打卡成功
+     *
+     * @param PunchAction message 成功返回的一些参数数据
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">T</span> msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>设置打卡回调</p> <div class="language-java extra-class"><pre class="language-java"><code>   <span class="token class-name">DWLive</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setPunchCallback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BaseCallback</span><span class="token operator">&lt;</span><span class="token class-name">PunchAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-16-上下课逻辑"><a href="#_2-16-上下课逻辑" class="header-anchor">#</a> 2.16 上下课逻辑</h3> <p>此方法为方法回调功能，相关类<code>DWLiveListener</code>，相关方法如下</p> <div class="language-java extra-class"><pre class="language-java"><code>  <span class="token comment">/**
+     * 流结束 执行下课逻辑
+     *
+     * @param isNormal 流是否正常结束
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStreamEnd</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isNormal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 流开始 执行上课逻辑
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStreamStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="_2-17-历史文档数据"><a href="#_2-17-历史文档数据" class="header-anchor">#</a> 2.17 历史文档数据</h3> <p>此方法为方法回调功能，相关类<code>DWLiveListener</code>，相关方法如下</p> <div class="language-java extra-class"><pre class="language-java"><code>     <span class="token comment">/**
+       * 回调当前翻页的信息&lt;br/&gt;
+       * 注意：&lt;br/&gt;
+       * 白板docTotalPage一直为0，pageNum从1开始&lt;br/&gt;
+       * 其他文档docTotalPage为正常页数，pageNum从0开始
+       *
+       * @param docId        文档Id
+       * @param docName      文档名称
+       * @param pageNum      当前页码
+       * @param docTotalPage 当前文档总共的页数
+       */</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onPageChange</span><span class="token punctuation">(</span><span class="token class-name">String</span> docId<span class="token punctuation">,</span> <span class="token class-name">String</span> docName<span class="token punctuation">,</span> <span class="token keyword">int</span> docWidth<span class="token punctuation">,</span> <span class="token keyword">int</span> docHeight<span class="token punctuation">,</span> <span class="token keyword">int</span> pageNum<span class="token punctuation">,</span> <span class="token keyword">int</span> docTotalPage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>注意该api可能会存在多次回调，回调情况如下:</p> <ul><li>首次进入直播间并调用<code>start()</code>开启直播回调</li> <li>网络切换会回调</li> <li>弱网造成直播尝试重连的情况会回调</li></ul> <h3 id="_2-18-线路切换-deprecated-2021-10-08"><a href="#_2-18-线路切换-deprecated-2021-10-08" class="header-anchor">#</a> 2.18 线路切换（Deprecated 2021-10-08）</h3> <p>由于该方法无法兼容切换视频清晰度，故将该方法列为废弃，在标记的时间之后不再维护，由<strong>2.20 清晰度切换</strong>和<strong>2.21线路切换</strong>代替</p> <p>直播可根据返回的线路进行线路切换和清晰度切换</p> <p>主动调用方法（DWLive）</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>changePlaySource(LiveLineConfig liveLineConfig, LiveLineSwitchListener changeLineCallback)</code></td> <td>切换清晰度和线路</td></tr></tbody></table> <p>监听回调方法（DWLiveListener）注意该api可能会存在多次回调，回调情况如下:</p> <ul><li>首次进入直播间并调用start()开启直播回调</li> <li>网络切换会回调</li> <li>弱网造成直播尝试重连的情况会回调</li> <li>上课会触发</li></ul> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>HDReceivedVideoAudioLines(List&lt;LiveLineVideoParams&gt; videoPlaySource, LiveLineAudioParams audioPlaySource);</code></td> <td>返回视频线路列表和音频线路列表</td></tr></tbody></table> <ul><li><p>主动调用方法中LiveLineConfig类属性信息如下</p> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token comment">/**
+  * 是否启用视频
+  */</span>
+<span class="token keyword">private</span> <span class="token keyword">boolean</span> disableVideo <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+ <span class="token comment">/**
+  * 线路配置信息
+  */</span>
+<span class="token keyword">private</span> <span class="token class-name">LiveLineParams</span> liveLineParams<span class="token punctuation">;</span>
+</code></pre></div><p>LiveLineParams属性参数信息如下</p> <div class="language-java extra-class"><pre class="language-java"><code>  <span class="token comment">/**
+   * 线路num  该参数对应回调方法中LiveLineVideoParams和LiveLineAudioParams的lines列表
+   */</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> lineNum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token comment">/**
+   * 清晰度
+   */</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> quality <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre></div><p>LiveLineSwitchListener类详细信息如下</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">LiveLineSwitchListener</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 切换线路回调
+     * @param success 是否成功
+     *                -2：切换时间间隔小于3s
+     *                -1：切换的线路不正确
+     *                0 ：切换成功
+     *
+     * @param currentSourceIndex  当前线路索引
+     * @param currentQuality  当前清晰度
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">onChangeLine</span><span class="token punctuation">(</span><span class="token keyword">int</span> success<span class="token punctuation">,</span> <span class="token keyword">int</span> currentSourceIndex<span class="token punctuation">,</span><span class="token keyword">int</span> currentQuality<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>回调方法中LiveLineVideoParams类属性信息如下</p> <p><strong>注意</strong>：lines 该属性信息代表的是线路列表，如0，1；0代表线路1，1代表线路2，对应主动调用方法中的lineNum</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 线路列表
+ */</span>
+<span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> lines <span class="token punctuation">;</span>
+<span class="token comment">/**
+ * 清晰度   0是原画  200是流畅  300是标清
+ */</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> quality <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre></div><p>LiveLineAudioParams类属性信息如下</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 线路列表
+ */</span>
+<span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> lines<span class="token punctuation">;</span>
+</code></pre></div></li></ul> <h3 id="_2-19-清晰度切换"><a href="#_2-19-清晰度切换" class="header-anchor">#</a> 2.19 清晰度切换</h3> <p>直播可根据回调返回的清晰度列表进行视频清晰度的切换</p> <p>监听回调类 DWLiveListener</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>onHDReceivedVideoQuality(List&lt;LiveQualityInfo&gt; videoQuality, LiveQualityInfo currentQuality)</code></td> <td>返回清晰度列表和默认清晰度对象</td></tr></tbody></table> <p>该api会存在多次回调  如：切换清晰度、网络不稳定、从音频切回到视频模式</p> <p>回调方法中<strong>LiveQualityInfo</strong>属性信息如下</p> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token comment">/**
+  * 清晰度对应的code码
+  */</span>
+ <span class="token keyword">private</span> <span class="token keyword">int</span> quality<span class="token punctuation">;</span>
+ <span class="token comment">/**
+  * 清晰度描述
+  */</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> desc<span class="token punctuation">;</span>
+</code></pre></div><p>主动调用类DWLive</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>changeQuality(int quality, LiveChangeSourceListener changeCallBack)</code></td> <td>切换清晰度</td></tr></tbody></table> <p>主动调用方法中参数信息如下</p> <p><strong>quality</strong>：清晰度对应的code码</p> <p><strong>changeCallBack</strong>：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**                                    
+ * 切换回调                                
+ *                                     
+ * @param success 是否成功                 
+ *                -2：切换时间间隔小于3s        
+ *                -1：参数错误          
+ *                0 ：切换成功              
+ */</span>                                    
+<span class="token keyword">void</span> <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token keyword">int</span> success<span class="token punctuation">)</span><span class="token punctuation">;</span>            
+</code></pre></div><h3 id="_2-20-线路切换"><a href="#_2-20-线路切换" class="header-anchor">#</a> 2.20 线路切换</h3> <p>直播可根据回调返回的线路列表进行视频和音频线路的切换</p> <p>监听回调类 DWLiveListener</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>onHDReceivedVideoAudioLines(List&lt;LiveLineInfo&gt; lines, int indexNum)</code></td> <td>返回线路列表和当前线路的索引</td></tr></tbody></table> <p>该api会存在多次回调  如：切换清晰度、网络不稳定、音频/视频模式切换</p> <p>用户账号开启音频线路功能并切换到<strong>音频播放模式</strong>（详见2.21）时时才会返回音频线路</p> <p>回调方法中<strong>LiveLineInfo</strong>属性信息如下</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 线路名称 如：line1、line2
+ */</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> line<span class="token punctuation">;</span> 
+</code></pre></div><p>主动调用类DWLive</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>changeLine(int lineIndex, LiveChangeSourceListener changeCallBack)</code></td> <td>切换音频或者视频线路</td></tr></tbody></table> <p>主动调用方法中参数信息如下</p> <p>**lineIndex ：**回调方法中参数lines的索引</p> <p><strong>changeCallBack :</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**                                    
+ * 切换回调                                
+ *                                     
+ * @param success 是否成功                 
+ *                -2：切换时间间隔小于3s        
+ *                -1：参数错误          
+ *                0 ：切换成功              
+ */</span>                                    
+<span class="token keyword">void</span> <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token keyword">int</span> success<span class="token punctuation">)</span><span class="token punctuation">;</span>      
+</code></pre></div><h3 id="_2-21-音视频播放模式切换"><a href="#_2-21-音视频播放模式切换" class="header-anchor">#</a> 2.21 音视频播放模式切换</h3> <p>直播可切换音频/视频播放模式，该方法需要账号开启音频线路功能</p> <p>监听回调类DWLiveListener</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td>onHDAudioMode(DWLive.Audio hasAudio)</td> <td>返回支持的播放模式</td></tr></tbody></table> <p>回调方法中hasAudio枚举说明如下</p> <div class="language-java extra-class"><pre class="language-java"><code>  <span class="token comment">/**
+     * HAVE_AUDIO_LINE_TRUE:  账号已开启音频模式
+     * HAVE_AUDIO_LINE_FALSE: 账号未开启音频模式
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">Audio</span> <span class="token punctuation">{</span>
+        <span class="token constant">HAVE_AUDIO_LINE_TRUE</span><span class="token punctuation">,</span> <span class="token constant">HAVE_AUDIO_LINE_FALSE</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><p>主动调用方法DWLive</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td><code>changePlayMode(PlayMode playMode, LiveChangeSourceListener changeCallBack)</code></td> <td>切换播放模式</td></tr></tbody></table> <p>该方法只有在回调方法返回类型为<strong>DWLive.Audio.HAVE_AUDIO_LINE_TRUE</strong>时才生效</p> <p>主动调用方法中参数信息如下</p> <p><strong>playMode ：</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+     * 播放模式
+     * PLAY_MODE_TYEP_VIDEO: 视频播放模式
+     * PLAY_MODE_TYEP_AUDIO: 音频播放模式
+     */</span>
+<span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">LivePlayMode</span> <span class="token punctuation">{</span>
+    <span class="token constant">PLAY_MODE_TYEP_VIDEO</span><span class="token punctuation">,</span> <span class="token constant">PLAY_MODE_TYEP_AUDIO</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>changeCallBack ：</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 切换回调
+ *
+ * @param success 是否成功
+ *                -2：切换时间间隔小于3s
+ *                -1：参数错误
+ *                0 ：切换成功
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token keyword">int</span> success<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/ccdoc/pages/6aaaf02dd210e3d2/" class="prev">
+        快速集成
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/ccdoc/assets/js/app.a9de829f.js" defer></script><script src="/ccdoc/assets/js/2.c82fb5c4.js" defer></script><script src="/ccdoc/assets/js/11.c2d12ce2.js" defer></script>
+  </body>
+</html>

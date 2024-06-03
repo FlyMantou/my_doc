@@ -1,2 +1,2 @@
 FROM nginx:alpine
-COPY ./docs/.vuepress/dist /usr/share/nginx/html
+COPY ./docs/dist /usr/share/nginx/html
